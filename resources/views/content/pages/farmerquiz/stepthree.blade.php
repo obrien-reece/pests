@@ -27,32 +27,28 @@
 
           <h4 class="mb-2" style="text-align: justify;font-family: 'Roboto', sans-serif;font-size: 17px;">
             <small>
-              To ensure that we provide you with the best possible experience, we'd like to learn a bit more about your farm. Your input will help us tailor our recommendations and assistance to your specific needs.
+              Understanding the pest challenges you've faced in the past is essential for tailoring effective pest management strategies. Please take a moment to provide details about the pest issues you've encountered on your farm.
             </small>
           </h4>
 
-          <form id="verificationLevelAuthentication" class="mb-3" action="{{ route('farmer.quiz.stepone.farm') }}" method="POST">
+          <form id="verificationLevelAuthentication" class="mb-3" action="{{ route('farmer.quiz.stepthree.store') }}" method="POST">
             @csrf
 
             <div class="row mt-3">
-              <div class="col-md-6">
+              <div class="col-md-6 mt-4">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Farm Name" name="farm_name">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Farm Location" name="farm_location">
+                  <select class="js-example-basic-single form-control" name="farming_type" id="farmingType" style="height: 40px; width: 100%;" required>
+                    <option value="Subsistence farming">Subsistence farming</option>
+                    <option value="Cash crop farming">Cash crop farming</option>
+                  </select>
                 </div>
               </div>
               <div class="col-md-6 mt-4">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Main type of crop" name="crop_name">
-                </div>
-              </div>
-              <div class="col-md-6 mt-4">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Farm size" name="farm_size">
+                  <select class="js-example-basic-single form-control" name="production_years" id="production_years" style="height: 40px; width: 100%;" required>
+                    <option value="0-15 years">0-15 years</option>
+                    <option value="15-30 years">15-30 years</option>
+                  </select>
                 </div>
               </div>
               <div class="mt-3">

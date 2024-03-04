@@ -42,13 +42,46 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
     $(document).ready(function () {
-      $('#pestSelect').select2({
-        placeholder: 'Select an industry',
+      $('#production_years').select2({
+        placeholder: "Experience in farming",
         allowClear: true
       });
 
       // Set the value to an empty string to display the placeholder on page load
-      $('#industrySelect').val('').trigger('change');
+      $('#production_years').val('').trigger('change');
+    });
+    </script>
+    <script>
+    $(document).ready(function () {
+      $('#farmingType').select2({
+        placeholder: "Type of farming",
+        allowClear: true
+      });
+
+      // Set the value to an empty string to display the placeholder on page load
+      $('#farmingType').val('').trigger('change');
+    });
+    </script>
+    <script>
+    $(document).ready(function () {
+      $('#pestFrequencySelect').select2({
+        placeholder: "What is the pest frequency",
+        allowClear: true
+      });
+
+      // Set the value to an empty string to display the placeholder on page load
+      $('#pestFrequencySelect').val('').trigger('change');
+    });
+    </script>
+    <script>
+    $(document).ready(function () {
+      $('#pestSelect').select2({
+        placeholder: "Select a pest you've faced before",
+        allowClear: true
+      });
+
+      // Set the value to an empty string to display the placeholder on page load
+      $('#pestSelect').val('').trigger('change');
     });
     </script>
 

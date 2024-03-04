@@ -54,6 +54,10 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('stepone', [FarmController::class, 'submitstepone'])->name('stepone.store');
     Route::get('steptwo', [FarmController::class, 'steptwo'])->name('steptwo.pesthistory');
     Route::post('steptwo', [FarmController::class, 'submitsteptwo'])->name('steptwo.store');
+    Route::get('stepthree', [FarmController::class, 'stepthree'])->name('stepthree.pesthistory');
+    Route::post('stepthree', [FarmController::class, 'submitsstepthree'])->name('stepthree.store');
+    Route::get('farmersanswers', [FarmController::class, 'farmersanswers'])->name('farmersanswers');
+    Route::post('farmersanswers', [FarmController::class, 'confirmfarmersanswers'])->name('confirmfarmersanswers');
   });
 
   // Main Page Route

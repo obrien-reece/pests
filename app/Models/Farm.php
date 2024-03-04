@@ -14,12 +14,14 @@ class Farm extends Model
 
   public $fillable = [
     'farmer_id',
+    'farm_size',
     'farm_name',
     'farm_location',
     'crop_name',
-    'farm_size',
+    'pest_frequency',
+    'pest',
+    'crop_names',
     'production_years',
-    'experience',
     'farming_type',
   ];
 

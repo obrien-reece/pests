@@ -18,8 +18,9 @@ return new class extends Migration
             $table->string('farm_location')->nullable();
             $table->string('crop_name')->nullable();
             $table->string('farm_size')->nullable();
+            $table->string('pest_frequency')->nullable();
+            $table->string('pest')->nullable();
             $table->string('production_years')->nullable();
-            $table->string('experience')->nullable();
             $table->string('farming_type')->nullable();
             $table->timestamps();
         });
