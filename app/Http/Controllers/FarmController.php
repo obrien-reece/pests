@@ -104,43 +104,4 @@ class FarmController extends Controller
         return redirect()->route('dashboard-analytics');
     }
 
-    /**
-       * Store a newly created resource in storage.
-       */
-    public function store(Request $request)
-    {
-      //
-    }
-
-    /**
-       * Display the specified resource.
-       */
-    public function show(Farm $farmersCrops)
-    {
-      //
-    }
-
-    /**
-       * Show the form for editing the specified resource.
-       */
-    public function edit(Farm $farmersCrops)
-    {
-      //
-    }
-
-    /**
-       * Update the specified resource in storage.
-       */
-    public function update(Request $request, Farm $farmersCrops)
-    {
-      //
-    }
-
-    /**
-       * Remove the specified resource from storage.
-       */
-    public function destroy(Farm $farmersCrops)
-    {
-      //
-    }
 }

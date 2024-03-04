@@ -20,14 +20,12 @@
   <div class="col-md-12 col-lg-4">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title mb-1"><small style="font-size: 15px;">Congratulations {{ Auth::user()->name }}! 🎉</small></h4>
-        <p class="pb-0">Best seller of the month</p>
-        <h4 class="text-primary mb-1">$42.8k</h4>
-        <p class="mb-2 pb-1">78% of target 🚀</p>
-        <a href="javascript:;" class="btn btn-sm btn-primary">View Sales</a>
+        <h4 class="card-title mb-1"><small style="font-size: 15px;">Farmer <strong>{{ Auth::user()->name }}</strong></small></h4>
+        <p class="pb-0 mt-4">Farm Name: <strong>{{ $farmerdetails->farm_name }}</strong> </p>
+        <h4 class="text-primary mb-1">{{ $farmerdetails->farm_size }} acres</h4>
+        <p class="mb-2 pb-1">Location: <strong>{{ $farmerdetails->farm_location }}</strong></p>
       </div>
       <img src="{{asset('assets/img/icons/misc/triangle-light.png')}}" class="scaleX-n1-rtl position-absolute bottom-0 end-0" width="166" alt="triangle background">
-      <img src="{{asset('assets/img/illustrations/trophy.png')}}" class="scaleX-n1-rtl position-absolute bottom-0 end-0 me-4 mb-4 pb-2" width="70" alt="view sales">
     </div>
   </div>
   <!--/ Congratulations card -->
@@ -37,7 +35,7 @@
     <div class="card">
       <div class="card-header">
         <div class="d-flex align-items-center justify-content-between">
-          <h5 class="card-title m-0 me-2">Transactions</h5>
+          <h5 class="card-title m-0 me-2">Farm Statistics</h5>
           <div class="dropdown">
             <button class="btn p-0" type="button" id="transactionID" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="mdi mdi-dots-vertical mdi-24px"></i>
@@ -49,7 +47,7 @@
             </div>
           </div>
         </div>
-        <p class="mt-3"><span class="fw-medium">Total 48.5% growth</span> 😎 this month</p>
+        <p class="mt-3"><span class="fw-medium">These are the insights to your farm</span></p>
       </div>
       <div class="card-body">
         <div class="row g-3">
@@ -57,12 +55,12 @@
             <div class="d-flex align-items-center">
               <div class="avatar">
                 <div class="avatar-initial bg-primary rounded shadow">
-                  <i class="mdi mdi-trending-up mdi-24px"></i>
+                  <i class="mdi mdi-bug-outline"></i>
                 </div>
               </div>
               <div class="ms-3">
-                <div class="small mb-1">Sales</div>
-                <h5 class="mb-0">245k</h5>
+                <div class="small mb-1">Pest Faced</div>
+                <h5 class="mb-0"><small style="font-size: 14px;">{{ $farmerdetails->pest }}</small></h5>
               </div>
             </div>
           </div>
@@ -70,12 +68,12 @@
             <div class="d-flex align-items-center">
               <div class="avatar">
                 <div class="avatar-initial bg-success rounded shadow">
-                  <i class="mdi mdi-account-outline mdi-24px"></i>
+                  <i class="mdi mdi-chart-timeline-variant"></i>
                 </div>
               </div>
               <div class="ms-3">
-                <div class="small mb-1">Customers</div>
-                <h5 class="mb-0">12.5k</h5>
+                <div class="small mb-1">Frequency</div>
+                <h5 class="mb-0"><small style="font-size: 14px;">{{ $farmerdetails->pest_frequency }}</small></h5>
               </div>
             </div>
           </div>
@@ -83,12 +81,12 @@
             <div class="d-flex align-items-center">
               <div class="avatar">
                 <div class="avatar-initial bg-warning rounded shadow">
-                  <i class="mdi mdi-cellphone-link mdi-24px"></i>
+                  <i class="mdi mdi-clock-outline"></i>
                 </div>
               </div>
               <div class="ms-3">
-                <div class="small mb-1">Product</div>
-                <h5 class="mb-0">1.54k</h5>
+                <div class="small mb-1">Years</div>
+                <h5 class="mb-0"><small style="font-size: 14px;">{{ $farmerdetails->production_years }}</small></h5>
               </div>
             </div>
           </div>
@@ -96,12 +94,12 @@
             <div class="d-flex align-items-center">
               <div class="avatar">
                 <div class="avatar-initial bg-info rounded shadow">
-                  <i class="mdi mdi-currency-usd mdi-24px"></i>
+                  <i class="mdi mdi-ev-plug-type2"></i>
                 </div>
               </div>
               <div class="ms-3">
-                <div class="small mb-1">Revenue</div>
-                <h5 class="mb-0">$88k</h5>
+                <div class="small mb-1">Farming Type</div>
+                <h5 class="mb-0"><small style="font-size: 14px;">{{ $farmerdetails->farming_type }}</small></h5>
               </div>
             </div>
           </div>

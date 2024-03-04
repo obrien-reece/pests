@@ -38,8 +38,8 @@
               <div class="col-md-6 mt-4">
                 <div class="form-group">
                   <select class="js-example-basic-single form-control" name="farming_type" id="farmingType" style="height: 40px; width: 100%;" required>
-                    <option value="Subsistence farming">Subsistence farming</option>
-                    <option value="Cash crop farming">Cash crop farming</option>
+                    <option value="Subsistence">Subsistence farming</option>
+                    <option value="Cash crop">Cash crop farming</option>
                   </select>
                 </div>
               </div>
