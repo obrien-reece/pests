@@ -17,21 +17,20 @@
 @section('content')
 <div class="row gy-4">
   <!-- Congratulations card -->
-  <div class="col-md-12 col-lg-4">
+  <div class="col-md-12 col-lg-3">
     <div class="card">
       <div class="card-body">
         <h4 class="card-title mb-1"><small style="font-size: 15px;">Farmer <strong>{{ Auth::user()->name }}</strong></small></h4>
-        <p class="pb-0 mt-4">Farm Name: <strong>{{ $farmerdetails->farm_name }}</strong> </p>
-        <h4 class="text-primary mb-1">{{ $farmerdetails->farm_size }} acres</h4>
-        <p class="mb-2 pb-1">Location: <strong>{{ $farmerdetails->farm_location }}</strong></p>
+        <p class="pb-0">Farm: <strong>{{ $farmerdetails->farm_name }}</strong> </p>
+        <h4 class="text-primary mb-1" style="margin-top: 40px;">{{ $farmerdetails->farm_size }} @if($farmerdetails->farm_size <=1) acre @else acres @endif</h4>
+        <p class="mb-2 pb-1"><span class="mdi mdi-pin" style="color: green;"></span>: <strong>{{ $farmerdetails->farm_location }}</strong></p>
       </div>
       <img src="{{asset('assets/img/icons/misc/triangle-light.png')}}" class="scaleX-n1-rtl position-absolute bottom-0 end-0" width="166" alt="triangle background">
     </div>
   </div>
-  <!--/ Congratulations card -->
 
   <!-- Transactions -->
-  <div class="col-lg-8">
+  <div class="col-lg-9">
     <div class="card">
       <div class="card-header">
         <div class="d-flex align-items-center justify-content-between">
