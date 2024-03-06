@@ -20,12 +20,11 @@ class Farm extends Model
     'crop_name',
     'pest_frequency',
     'pest',
-    'crop_names',
     'production_years',
     'farming_type',
   ];
 
   public function farmer() :BelongsTo {
-    return $this->belongsTo(User::class, 'id');
+    return $this->belongsTo(User::class);
   }
 }

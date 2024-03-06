@@ -223,72 +223,29 @@
   <!-- Four Cards -->
   <div class="col-xl-4 col-md-6">
     <div class="row gy-4">
-      <!-- Total Profit line chart -->
-      <div class="col-sm-6">
-        <div class="card h-100">
-          <div class="card-header pb-0">
-            <h4 class="mb-0">$86.4k</h4>
-          </div>
-          <div class="card-body">
-            <div id="totalProfitLineChart" class="mb-3"></div>
-            <h6 class="text-center mb-0">Total Profit</h6>
-          </div>
-        </div>
-      </div>
-      <!--/ Total Profit line chart -->
-      <!-- Total Profit Weekly Project -->
+    @foreach($pests as $pest)
+      @if($loop->index < 4)
       <div class="col-sm-6">
         <div class="card h-100">
           <div class="card-header d-flex align-items-center justify-content-between">
             <div class="avatar">
-              <div class="avatar-initial bg-secondary rounded-circle shadow">
-                <i class="mdi mdi-poll mdi-24px"></i>
+              <div class="avatar-initial bg-danger rounded-circle shadow-sm">
+                <i class="mdi mdi-bug-outline"></i>
               </div>
             </div>
-            <div class="dropdown">
-              <button class="btn p-0" type="button" id="totalProfitID" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="mdi mdi-dots-vertical mdi-24px"></i>
-              </button>
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="totalProfitID">
-                <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-                <a class="dropdown-item" href="javascript:void(0);">Share</a>
-                <a class="dropdown-item" href="javascript:void(0);">Update</a>
-              </div>
-            </div>
+            <!-- <div class="dropdown"> -->
+            <!--   <button class="btn p-0" type="button" id="newProjectID" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
+            <!--     <i class="mdi mdi-dots-vertical mdi-24px"></i> -->
+            <!--   </button> -->
+            <!--   <div class="dropdown-menu dropdown-menu-end" aria-labelledby="newProjectID"> -->
+            <!--     <a class="dropdown-item" href="javascript:void(0);">Refresh</a> -->
+            <!--     <a class="dropdown-item" href="javascript:void(0);">Share</a> -->
+            <!--     <a class="dropdown-item" href="javascript:void(0);">Update</a> -->
+            <!--   </div> -->
+            <!-- </div> -->
           </div>
           <div class="card-body mt-mg-1">
-            <h6 class="mb-2">Total Profit</h6>
-            <div class="d-flex flex-wrap align-items-center mb-2 pb-1">
-              <h4 class="mb-0 me-2">$25.6k</h4>
-              <small class="text-success mt-1">+42%</small>
-            </div>
-            <small>Weekly Project</small>
-          </div>
-        </div>
-      </div>
-      <!--/ Total Profit Weekly Project -->
-      <!-- New Yearly Project -->
-      <div class="col-sm-6">
-        <div class="card h-100">
-          <div class="card-header d-flex align-items-center justify-content-between">
-            <div class="avatar">
-              <div class="avatar-initial bg-primary rounded-circle shadow-sm">
-                <i class="mdi mdi-wallet-travel mdi-24px"></i>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="btn p-0" type="button" id="newProjectID" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="mdi mdi-dots-vertical mdi-24px"></i>
-              </button>
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="newProjectID">
-                <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-                <a class="dropdown-item" href="javascript:void(0);">Share</a>
-                <a class="dropdown-item" href="javascript:void(0);">Update</a>
-              </div>
-            </div>
-          </div>
-          <div class="card-body mt-mg-1">
-            <h6 class="mb-2">New Project</h6>
+            <h6 class="mb-2">{{ $pest->pest_name }}</h6>
             <div class="d-flex flex-wrap align-items-center mb-2 pb-1">
               <h4 class="mb-0 me-2">862</h4>
               <small class="text-danger mt-1">-18%</small>
@@ -297,23 +254,11 @@
           </div>
         </div>
       </div>
-      <!--/ New Yearly Project -->
-      <!-- Sessions chart -->
-      <div class="col-sm-6">
-        <div class="card h-100">
-          <div class="card-header pb-0">
-            <h4 class="mb-0">2,856</h4>
-          </div>
-          <div class="card-body">
-            <div id="sessionsColumnChart" class="mb-3"></div>
-            <h6 class="text-center mb-0">Sessions</h6>
-          </div>
-        </div>
-      </div>
-      <!--/ Sessions chart -->
-    </div>
+      @endif
+      @endforeach
   </div>
-  <!--/ Total Earning -->
+</div>
+<!--/ Total Earning -->
 
 </div>
 
