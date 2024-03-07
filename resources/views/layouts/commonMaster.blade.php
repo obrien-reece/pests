@@ -34,7 +34,6 @@
     <!-- data tables -->
   <link href="https://cdn.datatables.net/2.0.1/css/dataTables.dataTables.css" rel="stylesheet" />
 
-
   </head>
 
   <body>
@@ -95,12 +94,12 @@
     });
     </script>
 
-  <!-- data tables -->
+    <!-- data tables -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>
 
     <script>
-new DataTable('#example');
+      new DataTable('#example');
     </script>
 
   </body>

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Farmer Pest Project is a web application designed to assist farmers in identifying and managing pests in their crops. By providing real-time data on local weather conditions and pest prevalence, this tool empowers farmers to make informed decisions to protect their crops and optimize their yields.
+Pesty is a web application designed to assist farmers in identifying and managing pests in their crops. By providing real-time data on local weather conditions and pest prevalence, this tool empowers farmers to make informed decisions to protect their crops and optimize their yields.
 
 ## Features
 
