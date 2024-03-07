@@ -222,8 +222,16 @@
 
   <!-- Four Cards -->
   <div class="col-xl-4 col-md-6">
+    <div class="mb-4 d-flex justify-content-between align-items-center">
+      <h5 class="fw-bold mb-0">List of Pests in {{ $farmerdetails->farm_location }}</h5>
+      <div>
+        <a href="{{ route('index-of-pests', ['farmer' => Auth::id(), 'location' => $farmerdetails->farm_location]) }}">
+          <i class="mdi mdi-eye-outline" title="View All"></i>
+        </a>
+      </div>
+    </div>
     <div class="row gy-4">
-    @foreach($pests as $pest)
+      @foreach($pests as $pest)
       @if($loop->index < 4)
       <div class="col-sm-6">
         <div class="card h-100">
@@ -233,24 +241,14 @@
                 <i class="mdi mdi-bug-outline"></i>
               </div>
             </div>
-            <!-- <div class="dropdown"> -->
-            <!--   <button class="btn p-0" type="button" id="newProjectID" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
-            <!--     <i class="mdi mdi-dots-vertical mdi-24px"></i> -->
-            <!--   </button> -->
-            <!--   <div class="dropdown-menu dropdown-menu-end" aria-labelledby="newProjectID"> -->
-            <!--     <a class="dropdown-item" href="javascript:void(0);">Refresh</a> -->
-            <!--     <a class="dropdown-item" href="javascript:void(0);">Share</a> -->
-            <!--     <a class="dropdown-item" href="javascript:void(0);">Update</a> -->
-            <!--   </div> -->
-            <!-- </div> -->
           </div>
           <div class="card-body mt-mg-1">
             <h6 class="mb-2">{{ $pest->pest_name }}</h6>
             <div class="d-flex flex-wrap align-items-center mb-2 pb-1">
-              <h4 class="mb-0 me-2">862</h4>
-              <small class="text-danger mt-1">-18%</small>
+              <h4 class="mb-0 me-2"><small style="font-size: 12px;">{{ $pest->crop_attacked }}</small></h4>
+              <small class="text-danger mt-1">{{ $pest->devastation_severity }}</small>
             </div>
-            <small>Yearly Project</small>
+            <a href="#" style="color: grey;font-size: 12px;">More info<span class="mdi mdi-chevron-right"></span></a>
           </div>
         </div>
       </div>

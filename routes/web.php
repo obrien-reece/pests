@@ -1,14 +1,15 @@
 <?php
 
 use App\Http\Controllers\FarmController;
+use App\Http\Controllers\PestInfoController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\dashboard\Analytics;
 use App\Http\Controllers\pages\AccountSettingsAccount;
 use App\Http\Controllers\pages\AccountSettingsNotifications;
 use App\Http\Controllers\pages\AccountSettingsConnections;
-use App\Http\Controllers\pages\MiscError;
 use App\Http\Controllers\pages\MiscUnderMaintenance;
+use App\Http\Controllers\PestController;
 
 Auth::routes();
 
@@ -27,16 +28,22 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('farmersanswers', [FarmController::class, 'confirmfarmersanswers'])->name('confirmfarmersanswers');
   });
 
-
   // Main Page Route
   Route::get('/', [Analytics::class, 'index'])->name('dashboard-analytics');
 
+  Route::group(['prefix' => 'pests/'], function() {
+    Route::get('{farmer}/{location}/', [PestController::class, 'index'])->name('index-of-pests');
+    Route::get('{pest}', [PestController::class, 'show'])->name('show-pest');
+  });
+
+  Route::get('/pages/pest/upload', [PestInfoController::class, 'index'])->name('pest-info-upload');
+
   // pages
   Route::get('/pages/account-settings-account', [AccountSettingsAccount::class, 'index'])->name('pages-account-settings-account');
-  Route::post('/pages/account-settings-account', [AccountSettingsAccount::class, 'update'])->name('pages-account-settings-account-update');
+  Route::patch('/pages/account-settings-account', [AccountSettingsAccount::class, 'update'])->name('pages-account-settings-account-update');
+  Route::delete('/pages/account-settings-account/{id}', [AccountSettingsAccount::class, 'destroy'])->name('pages-account-settings-account-delete');
   Route::get('/pages/account-settings-notifications', [AccountSettingsNotifications::class, 'index'])->name('pages-account-settings-notifications');
   Route::get('/pages/account-settings-connections', [AccountSettingsConnections::class, 'index'])->name('pages-account-settings-connections');
-  Route::get('/pages/misc-error', [MiscError::class, 'index'])->name('pages-misc-error');
   Route::get('/pages/misc-under-maintenance', [MiscUnderMaintenance::class, 'index'])->name('pages-misc-under-maintenance');
 
   Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

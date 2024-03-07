@@ -73,10 +73,9 @@
       "slug": "pages-misc",
       "submenu": [
         {
-          "url": "pages/misc-error",
-          "name": "Error",
-          "slug": "pages-misc-error",
-          "target": "_blank"
+          "url": "/pages/pest/upload",
+          "name": "Upload",
+          "slug": "pages-misc-error"
         },
         {
           "url": "pages/misc-under-maintenance",

@@ -30,6 +30,7 @@
         <div class="card-body pt-2 mt-1">
           <form id="formAccountSettings" method="POST" action="{{ route('pages-account-settings-account-update') }}">
             @csrf
+            @method('PATCH')
             <div class="row mt-2 gy-4">
               <div class="col-md-6">
                 <div class="form-floating form-floating-outline">
@@ -94,14 +95,14 @@
                 </div>
               </div>
             </div>
-           <div class="mt-4">
-              <button type="submit" class="btn btn-primary me-2">Save changes</button>
+            <div class="mt-4">
+              <button type="submit" class="btn btn-primary btn-sm me-2">Save changes</button>
             </div>
           </form>
         </div>
-        <!-- /Account -->
-
       </div>
+      <!-- /Account -->
+
       <div class="card">
         <h5 class="card-header fw-normal">Delete Account</h5>
         <div class="card-body">
@@ -111,17 +112,46 @@
               <p class="mb-0">Once you delete your account, there is no going back. Please be certain.</p>
             </div>
           </div>
-          <form id="formAccountDeactivation" onsubmit="return false">
-            <div class="form-check mb-3 ms-3">
-              <input class="form-check-input" type="checkbox" name="accountActivation" id="accountActivation" />
-              <label class="form-check-label" for="accountActivation">I confirm my account deactivation</label>
-            </div>
-            <button type="submit" class="btn btn-danger">Deactivate Account</button>
+          <div class="form-check mb-3 ms-3">
+            <input class="form-check-input" type="checkbox" name="accountActivation" id="accountActivation" onchange="toggleSubmitButton(this)" />
+            <label class="form-check-label" for="accountActivation">I confirm my account deactivation</label>
+          </div>
+          <button type="submit" class="btn btn-sm btn-danger" id="deactivateButton" data-bs-toggle="modal" data-bs-target="#deleteAccountModal" disabled>Deactivate Account</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Account for Farmer Modal -->
+  <div class="modal fade" id="deleteAccountModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confirm Account Deactivation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to deactivate your account? This action cannot be undone.
+        </div>
+        <div class="modal-footer">
+          <form method="POST" action="{{ route('pages-account-settings-account-delete', ['id' => Auth::id()]) }}">
+            @csrf
+            @method('DELETE')
+            <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-sm btn-danger">Deactivate Account</button>
           </form>
         </div>
       </div>
     </div>
   </div>
+  <!-- Delete Account for Farmer Modal -->
+
+  <script>
+  function toggleSubmitButton(checkbox) {
+    var submitButton = document.getElementById('deactivateButton');
+    submitButton.disabled = !checkbox.checked;
+  }
+  </script>
 
   @if(Session::has('success'))
   <script>

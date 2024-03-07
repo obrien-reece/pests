@@ -31,6 +31,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- data tables -->
+  <link href="https://cdn.datatables.net/2.0.1/css/dataTables.dataTables.css" rel="stylesheet" />
+
+
   </head>
 
   <body>
@@ -89,6 +93,14 @@
       // Set the value to an empty string to display the placeholder on page load
       $('#pestSelect').val('').trigger('change');
     });
+    </script>
+
+  <!-- data tables -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>
+
+    <script>
+new DataTable('#example');
     </script>
 
   </body>

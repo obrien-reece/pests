@@ -21,7 +21,7 @@ class Analytics extends Controller
     $weatherData = $response->json();
 
     // Ensure weather data is retrieved successfully
-    if ($weatherData) {
+    if($weatherData) {
       // Extract temperature and humidity from the weather data
       $temperature = $weatherData['main']['temp'];
       $humidity = $weatherData['main']['humidity'];

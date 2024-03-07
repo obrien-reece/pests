@@ -44,4 +44,19 @@ class AccountSettingsAccount extends Controller
 
     return redirect()->back()->with('success', 'Profile updated successfully');
   }
+
+    public function destroy(Request $request, $id)
+    {
+        // Get the authenticated user
+        $user = User::where('id', $id);
+
+        // Delete the user's account
+        $user->delete();
+
+        // Log out the user
+        Auth::logout();
+
+        // Redirect the user to the login page with a success message
+        return redirect()->route('login')->with('success', 'Your account has been deleted successfully.');
+    }
 }
