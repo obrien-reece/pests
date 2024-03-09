@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pest;
 use App\Models\PestInfo;
 use Illuminate\Http\Request;
 
@@ -10,9 +11,19 @@ class PestInfoController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request, $id)
     {
-        return view('content.pages.upload-pests');
+        $pest = Pest::where('id', $id)->first();
+        return view('content.pages.upload-pests', [
+          'pest' => $pest
+        ]);
+    }
+
+    public function showpests(){
+        $pests = Pest::all();
+        return view('content.pages.showpests', [
+          'pests' => $pests
+        ]);
     }
 
     /**
@@ -28,7 +39,6 @@ class PestInfoController extends Controller
      */
     public function store(Request $request)
     {
-        //
     }
 
     /**

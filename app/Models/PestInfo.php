@@ -14,7 +14,7 @@ class PestInfo extends Model
   public $fillable = [
     'pest_id',
     'description',
-     'image_1',
+    'image_1',
     'image_2',
     'image_3',
   ];

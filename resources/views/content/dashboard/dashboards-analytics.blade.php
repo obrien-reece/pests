@@ -17,6 +17,7 @@
 @section('content')
 <div class="row gy-4">
   <!-- Congratulations card -->
+
   <div class="col-md-12 col-lg-3">
     <div class="card">
       <div class="card-body">

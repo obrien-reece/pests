@@ -8,7 +8,6 @@ use App\Http\Controllers\dashboard\Analytics;
 use App\Http\Controllers\pages\AccountSettingsAccount;
 use App\Http\Controllers\pages\AccountSettingsNotifications;
 use App\Http\Controllers\pages\AccountSettingsConnections;
-use App\Http\Controllers\pages\MiscUnderMaintenance;
 use App\Http\Controllers\PestController;
 
 Auth::routes();
@@ -34,10 +33,11 @@ Route::group(['middleware' => 'auth'], function() {
   Route::group(['prefix' => 'pests/'], function() {
     Route::get('{farmer}/{location}/', [PestController::class, 'index'])->name('index-of-pests');
     Route::get('{pest}', [PestController::class, 'show'])->name('show-pest');
-    Route::get('upload', [PestController::class, 'store'])->name('store-pest');
+    Route::get('upload/{id}', [PestInfoController::class, 'create'])->name('store-pest');
+    Route::get('', [PestInfoController::class, 'showpests'])->name('showpests');
   });
 
-  Route::get('/pages/pest/upload', [PestInfoController::class, 'index'])->name('pest-info-upload');
+  Route::get('/pages/pest/upload/{id}', [PestInfoController::class, 'index'])->name('pest-info-upload');
 
   // pages
   Route::get('/pages/account-settings-account', [AccountSettingsAccount::class, 'index'])->name('pages-account-settings-account');
@@ -45,7 +45,6 @@ Route::group(['middleware' => 'auth'], function() {
   Route::delete('/pages/account-settings-account/{id}', [AccountSettingsAccount::class, 'destroy'])->name('pages-account-settings-account-delete');
   Route::get('/pages/account-settings-notifications', [AccountSettingsNotifications::class, 'index'])->name('pages-account-settings-notifications');
   Route::get('/pages/account-settings-connections', [AccountSettingsConnections::class, 'index'])->name('pages-account-settings-connections');
-  Route::get('/pages/misc-under-maintenance', [MiscUnderMaintenance::class, 'index'])->name('pages-misc-under-maintenance');
 
   Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

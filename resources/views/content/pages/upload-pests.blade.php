@@ -19,7 +19,7 @@
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 
 <div class="container mt-4">
-  <form method="POST" action="{{ route('store-pest') }}" enctype="multipart/form-data">
+  <form method="POST" action="{{ route('store-pest', ['id' => $pest->id]) }}" enctype="multipart/form-data">
     @csrf
     <div id="summernote" name="description"></div>
     <input type="file" name="image_1" class="form-control mt-2 mb-2">
@@ -33,4 +33,5 @@ $('#summernote').summernote({
   tabsize: 2,
   height: 100
 });
-</script>@endsection
+</script>
+@endsection
