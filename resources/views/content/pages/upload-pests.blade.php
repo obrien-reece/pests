@@ -22,7 +22,7 @@
 
   <div class="mb-4"><span>{{ $pest->pest_name }}</span></div>
 
-  <form method="POST" action="{{ route('store-pest', ['id' => $pest->id]) }}" enctype="multipart/form-data">
+  <form method="POST" action="{{ route('store-pest') }}" enctype="multipart/form-data">
     @csrf
     <input type="hidden" value="{{ $pest->id }}" name="pest_id">
     <textarea name="description" id="summernote" class="form-control" onkeyup="AutoGrowTextArea(this)" style="overflow:hidden">  </textarea>

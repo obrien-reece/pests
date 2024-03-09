@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('pest_info', function (Blueprint $table) {
             $table->id();
-            $table->string('pest_id')->nullable();
-            $table->string('description')->nullable();
+            $table->foreignId('pest_id')->references('id')->on('pests')->cascadeOnDelete();
+            $table->longText('description')->nullable();
             $table->string('image_1')->nullable();
             $table->string('image_2')->nullable();
             $table->string('image_3')->nullable();

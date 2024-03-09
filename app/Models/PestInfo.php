@@ -9,7 +9,7 @@ class PestInfo extends Model
 {
   use HasFactory;
 
-  public $table =['pest_info'];
+  public $table = 'pest_info';
 
   public $fillable = [
     'pest_id',
