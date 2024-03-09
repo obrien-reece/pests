@@ -39,6 +39,35 @@ class PestInfoController extends Controller
      */
     public function store(Request $request)
     {
+    dd($request->description);
+        // Validate the form data
+        $request->validate([
+            'description' => 'required|string',
+            'image_1' => 'required|image|max:2048', // Max file size: 2MB
+            'image_2' => 'nullable|image|max:2048',
+            'image_3' => 'nullable|image|max:2048',
+        ]);
+
+        // Store the uploaded images
+        $imagePaths = [];
+        foreach (['image_1', 'image_2', 'image_3'] as $imageName) {
+            if ($request->hasFile($imageName)) {
+                $imagePath = $request->file($imageName)->store('pest_data_images', 'public');
+                $imagePaths[$imageName] = $imagePath;
+            }
+        }
+
+        // Create a new PestInfo instance
+        $pestInfo = new PestInfo();
+        $pestInfo->pest_id = $request->pest_id;
+        $pestInfo->description = $request->description;
+        $pestInfo->image_1 = $imagePaths['image_1'] ?? null;
+        $pestInfo->image_2 = $imagePaths['image_2'] ?? null;
+        $pestInfo->image_3 = $imagePaths['image_3'] ?? null;
+        $pestInfo->save();
+
+        // Redirect back with a success message
+        // return redirect()->back()->with('success', 'Pest information has been successfully added.');
     }
 
     /**

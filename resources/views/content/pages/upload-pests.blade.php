@@ -19,19 +19,36 @@
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 
 <div class="container mt-4">
+
+  <div class="mb-4"><span>{{ $pest->pest_name }}</span></div>
+
   <form method="POST" action="{{ route('store-pest', ['id' => $pest->id]) }}" enctype="multipart/form-data">
     @csrf
-    <div id="summernote" name="description"></div>
+    <input type="hidden" value="{{ $pest->id }}" name="pest_id">
+    <textarea name="description" id="summernote" class="form-control" onkeyup="AutoGrowTextArea(this)" style="overflow:hidden">  </textarea>
     <input type="file" name="image_1" class="form-control mt-2 mb-2">
     <input type="file" name="image_2" class="form-control mt-2 mb-2">
     <input type="file" name="image_3" class="form-control mt-2 mb-2">
     <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button>
   </form>
 </div>
+
 <script>
 $('#summernote').summernote({
   tabsize: 2,
-  height: 100
+  height: 120,
+  fontNames: [ 'Serif', 'Sans', 'Arial', 'Arial Black', 'Courier', 'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Sacramento', 'Times New Roman'],
+  fontNamesIgnoreCheck: [ 'Serif', 'Sans', 'Arial', 'Arial Black', 'Courier', 'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Sacramento', 'Times New Roman'],
+  toolbar: [
+    ['style', ['style']],
+    ['fontname', ['fontname']],
+    ['font', ['bold', 'underline', 'clear']],
+    ['color', ['color']],
+    ['para', ['ul', 'ol', 'paragraph']],
+    ['table', ['table']],
+    ['insert', ['link']],
+    ['view', ['fullscreen', 'codeview', 'help']]
+  ]
 });
 </script>
 @endsection
