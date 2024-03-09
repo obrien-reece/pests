@@ -32,7 +32,8 @@ Route::group(['middleware' => 'auth'], function() {
 
   Route::group(['prefix' => 'pests/'], function() {
     Route::get('{farmer}/{location}/', [PestController::class, 'index'])->name('index-of-pests');
-    Route::get('{pest}', [PestController::class, 'show'])->name('show-pest');
+    Route::get('{id}', [PestController::class, 'show'])->name('show-pest');
+
     Route::post('upload', [PestInfoController::class, 'store'])->name('store-pest');
     Route::get('', [PestInfoController::class, 'showpests'])->name('showpests');
   });

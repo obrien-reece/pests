@@ -249,7 +249,7 @@
               <h4 class="mb-0 me-2"><small style="font-size: 12px;">{{ $pest->crop_attacked }}</small></h4>
               <small class="text-danger mt-1">{{ $pest->devastation_severity }}</small>
             </div>
-            <a href="#" style="color: grey;font-size: 12px;">More info<span class="mdi mdi-chevron-right"></span></a>
+            <a href="{{ route('show-pest', ['id' => $pest->id]) }}" style="color: grey;font-size: 12px;">More info<span class="mdi mdi-chevron-right"></span></a>
           </div>
         </div>
       </div>

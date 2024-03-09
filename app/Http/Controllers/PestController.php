@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Farm;
 use App\Models\Pest;
+use App\Models\PestInfo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
@@ -59,9 +60,12 @@ class PestController extends Controller
   /**
      * Display the specified resource.
      */
-  public function show(Pest $pest)
+  public function show($id)
   {
-    //
+    $pest = PestInfo::where('pest_id', $id)->first();
+    return view('content.pages.pests.show', [
+      'pest' => $pest
+    ]);
   }
 
   /**

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Pest extends Model
 {
@@ -18,5 +19,9 @@ class Pest extends Model
     'prevention_measures',
     'emergency_treatment',
   ];
+
+  public function pestinfo(): HasOne {
+    return $this->hasOne(PestInfo::class);
+  }
 
 }
