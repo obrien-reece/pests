@@ -12,7 +12,10 @@
 
 <ul>
   @foreach($pests as $pest)
-  <li><a href="{{ route('pest-info-upload', ['id' => $pest->id]) }}">{{ $pest->pest_name }}</a></li>
+  <li>
+    <a href="{{ route('pest-info-upload', ['id' => $pest->id]) }}">{{ $pest->pest_name }}</a> |------------------------------|
+    <a href="{{ route('show-pest', ['id' => $pest->id]) }}">{{ $pest->pest_name }}</a>
+  </li>
   @endforeach
 </ul>
 

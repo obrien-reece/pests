@@ -79,7 +79,7 @@ class PestInfoController extends Controller
     $pestinfo->save();
 
     // Redirect back with a success message
-    return redirect()->back()->with('success', 'Pest information has been successfully added.');
+    return redirect()->route('showpests');
   }
 
   /**

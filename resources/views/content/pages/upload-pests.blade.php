@@ -36,12 +36,14 @@
 <script>
 $('#summernote').summernote({
   tabsize: 2,
+  fontSizes: ['8', '10', '12', '14', '16', '18', '20', '22', '24', '26', '28', '30', '32', '34', '36', '38', '40', '42', '44', '46', '48', '50'],
   height: 120,
   fontNames: [ 'Serif', 'Sans', 'Arial', 'Arial Black', 'Courier', 'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Sacramento', 'Times New Roman'],
   fontNamesIgnoreCheck: [ 'Serif', 'Sans', 'Arial', 'Arial Black', 'Courier', 'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Sacramento', 'Times New Roman'],
   toolbar: [
     ['style', ['style']],
     ['fontname', ['fontname']],
+    ['fontsize', ['fontsize']],
     ['font', ['bold', 'underline', 'clear']],
     ['color', ['color']],
     ['para', ['ul', 'ol', 'paragraph']],
