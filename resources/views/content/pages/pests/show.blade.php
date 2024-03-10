@@ -21,15 +21,15 @@
 <div class="container">
 
 @if($pest->image_1)
-    <img style="float: right; clear: both;margin-bottom: 20px;margin-left: 20px;" src="{{ asset($pest->image_1) }}" alt="Image 1">
+    <img style="float: right; clear: both;margin-bottom: 20px;margin-left: 20px;" width="300px" src="{{ asset($pest->image_1) }}" alt="Image 1">
 @endif
 
 @if($pest->image_2)
-    <img style="float: right; clear: both;margin-bottom: 20px;margin-left: 20px;" src="{{ asset($pest->image_2) }}" alt="Image 2">
+    <img style="float: right; clear: both;margin-bottom: 20px;margin-left: 20px;" width="300px" src="{{ asset($pest->image_2) }}" alt="Image 2">
 @endif
 
 @if($pest->image_3)
-    <img style="float: right; clear: both;margin-bottom: 20px;margin-left: 20px;" src="{{ asset($pest->image_3) }}" alt="Image 3">
+    <img style="float: right; clear: both;margin-bottom: 20px;margin-left: 20px;" width="300px" src="{{ asset($pest->image_3) }}" alt="Image 3">
 @endif
       {!! $pest->description !!}
 </div>

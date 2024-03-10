@@ -9,18 +9,13 @@
 10,Cabbage loopers,Cabbage,Severe,20,70,Install row covers to protect cabbage plants from cabbage looper infestation.,Release parasitic wasps such as Trichogramma to control cabbage looper populations.
 11,European corn borers,Corn,Severe,24,75,Destroy corn stalks and residue after harvest to disrupt European corn borer lifecycle.,Apply biological control agents such as nematodes or parasitic wasps to soil to target European corn borer larvae.
 12,Flea beetles,Eggplants,Mild,22,68,Use floating row covers to protect eggplant seedlings from flea beetle damage.,Apply diatomaceous earth or kaolin clay to eggplant leaves as a physical barrier against flea beetles.
-13,Fruit flies,Tomatoes,Moderate,25,70,Remove overripe or damaged fruit from tomato plants to reduce fruit fly attraction.,Set up traps using apple cider vinegar or a commercial fruit fly trap solution.
 14,Gypsy moths,Various trees,Severe,28,70,Wrap tree trunks with burlap bands to capture gypsy moth caterpillars.,Apply biological insecticides containing Bacillus thuringiensis (Bt) to control gypsy moth caterpillars.
 15,Leafhoppers,Beans,Moderate,24,65,Remove weeds and grasses from around bean plants to eliminate leafhopper habitat.,Apply insecticidal soap or neem oil to bean plants to control leafhopper populations.
 16,Loopers,Brassicas,Mild,20,68,Install row covers to protect brassica crops from looper infestation.,Handpick loopers from plants and drop them into a bucket of soapy water for disposal.
 17,Mealybugs,Houseplants,Moderate,25,75,Wipe houseplant leaves with a damp cloth to remove mealybugs.,Spray affected houseplants with insecticidal soap or neem oil.
-18,Mites,Tomatoes,Mild,26,65,Increase humidity around tomato plants to discourage mite infestation.,Spray tomato plants with a strong stream of water to dislodge mites.
-19,Moths,Cotton,Severe,30,70,Use pheromone traps to monitor moth populations in cotton fields.,Apply biological control agents such as parasitic wasps or nematodes to target moth larvae.
-20,Plant bugs,Peppers,Mild,24,70,Remove weeds and debris from around pepper plants to eliminate plant bug habitat.,Introduce predatory insects such as minute pirate bugs to control plant bug populations.
 21,Potato beetles,Potatoes,Severe,28,75,Handpick adult potato beetles and their larvae from potato plants.,Apply insecticides containing spinosad or neem oil to control potato beetle infestations.
 22,Scale insects,Citrus trees,Moderate,26,70,Prune heavily infested branches from citrus trees to reduce scale insect populations.,Apply horticultural oil or insecticidal soap to citrus trees to control scale insects.
 23,Slugs,Lettuce,Moderate,22,80,Handpick slugs from lettuce plants and place them in a container of soapy water.,Apply iron phosphate-based slug baits around lettuce plants to attract and kill slugs.
-24,Snails,Cabbage,Mild,20,75,Handpick snails from cabbage plants and place them in a container of soapy water.,Apply copper-based snail repellents or barriers around cabbage plants to deter snails.
 25,Sowbugs,Potatoes,Mild,24,70,Remove organic debris and mulch from around potato plants to reduce sowbug habitat.,Apply diatomaceous earth or iron phosphate-based baits to control sowbug populations.
 26,Spider mites,Strawberries,Moderate,28,65,Spray strawberry plants with a strong stream of water to dislodge spider mites.,Introduce predatory mites such as Phytoseiulus persimilis to control spider mite populations.
 27,Thrips,Roses,Moderate,25,70,Prune and remove infested rose blossoms to reduce thrips populations.,Apply insecticidal soap or neem oil to rose plants to control thrips.
@@ -29,7 +24,6 @@
 30,Woolly aphids,Apples,Severe,24,70,Prune heavily infested branches from apple trees to reduce woolly aphid populations.,Apply insecticidal soap or neem oil to apple trees to control woolly aphids.
 31,Zebra caterpillars,Cabbage,Severe,26,70,Handpick zebra caterpillars from cabbage plants and place them in a container of soapy water.,Apply Bacillus thuringiensis (Bt) or spinosad-based insecticides to control zebra caterpillar infestations.
 32,Bean leaf beetles,Beans,Severe,24,70,Practice crop rotation with non-legume crops to disrupt bean leaf beetle lifecycle.,Apply insecticides containing pyrethroids or neonicotinoids to control bean leaf beetle populations.
-33,Birds,Cherries,Moderate,30,70,Use bird netting or scare devices such as reflective tape to deter birds from cherry trees.,Apply taste repellents or visual deterrents to cherry trees to discourage bird feeding.
 34,Blister beetles,Potatoes,Moderate,26,70,Handpick blister beetles from potato plants and place them in a container of soapy water.,Apply insecticides containing pyrethrins or carbaryl to control blister beetle populations.
 35,Boxelder bugs,Maple trees,Moderate,28,70,Seal cracks and crevices in the exterior of buildings to prevent boxelder bug entry.,Apply insecticidal soap or pyrethroid-based sprays to boxelder bugs congregating on trees.
 36,Cabbage maggots,Cabbage,Moderate,22,70,Apply floating row covers to cabbage plants to prevent cabbage maggot egg-laying.,Apply beneficial nematodes to soil to control cabbage maggot populations.
@@ -39,7 +33,6 @@
 40,Earwigs,Strawberries,Mild,24,70,Place rolled-up newspaper traps near strawberry plants to capture earwigs.,Apply diatomaceous earth or insecticidal soap to strawberry plants to control earwig populations.
 41,Fall armyworms,Rice,Severe,28,75,Monitor for fall armyworm egg masses on rice leaves and destroy them.,Apply insecticides containing spinosad or Bt to control fall armyworm larvae on rice plants.
 42,Flea beetles,Tomatoes,Mild,26,68,Use floating row covers to protect tomato seedlings from flea beetle damage.,Apply neem oil or insecticidal soap to tomato plants to control flea beetle populations.
-43,Fruit flies,Berries,Moderate,25,70,Remove overripe or damaged fruit from berry plants to reduce fruit fly attraction.,Set up traps using apple cider vinegar or a commercial fruit fly trap solution.
 44,Garden webworms,Beans,Severe,26,70,Handpick garden webworms from bean plants and dispose of them.,Apply insecticides containing Bacillus thuringiensis (Bt) to control garden webworm infestations.
 45,Grasshoppers,Corn,Severe,30,75,Install physical barriers such as mesh fencing around corn fields to exclude grasshoppers.,Apply insecticides containing pyrethroids or carbaryl to control grasshopper populations.
 46,Green peach aphids,Peaches,Moderate,26,70,Encourage natural predators such as ladybugs and lacewings to control green peach aphids.,Apply insecticidal soap or neem oil to peach trees to control green peach aphids.
