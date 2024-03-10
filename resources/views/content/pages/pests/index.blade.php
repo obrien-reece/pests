@@ -66,7 +66,7 @@
           {{ $pest->devastation_severity }}
         </td>
         <td>
-          <a href="{{ route('show-pest', ['pest' => $pest->pest_name]) }}"><i class="mdi mdi-eye"></i></a>
+          <a href="{{ route('show-pest', ['id' => $pest->id]) }}"><i class="mdi mdi-eye"></i></a>
         </td>
       </tr>
       @endforeach

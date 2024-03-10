@@ -136,7 +136,6 @@
   </div>
   <!-- Farmer location area weather -->
 
-  <!-- Total Earnings -->
   <div class="col-xl-4 col-md-6">
     <div class="card">
       <div class="card-header d-flex align-items-center justify-content-between">
@@ -219,7 +218,6 @@
       </div>
     </div>
   </div>
-  <!--/ Total Earnings -->
 
   <!-- Four Cards -->
   <div class="col-xl-4 col-md-6">
@@ -249,7 +247,10 @@
               <h4 class="mb-0 me-2"><small style="font-size: 12px;">{{ $pest->crop_attacked }}</small></h4>
               <small class="text-danger mt-1">{{ $pest->devastation_severity }}</small>
             </div>
-            <a href="{{ route('show-pest', ['id' => $pest->id]) }}" style="color: grey;font-size: 12px;">More info<span class="mdi mdi-chevron-right"></span></a>
+            <a href="{{ route('show-pest', ['id' => $pest->id]) }}" style="color: grey; font-size: 12px;">
+              More info
+              <span class="mdi mdi-chevron-right"></span>
+            </a>
           </div>
         </div>
       </div>
@@ -257,9 +258,7 @@
       @endforeach
   </div>
 </div>
-<!--/ Total Earning -->
 
-</div>
 
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
