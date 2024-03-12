@@ -5,10 +5,6 @@
       "name": "Dashboards",
       "icon": "menu-icon tf-icons mdi mdi-home-outline",
       "slug": "dashboard",
-      "badge": [
-        "danger",
-        "5"
-      ],
       "submenu": [
         {
           "url": "/",
@@ -29,41 +25,6 @@
           "url": "pages/account-settings-account",
           "name": "Account",
           "slug": "pages-account-settings-account"
-        },
-        {
-          "url": "pages/account-settings-notifications",
-          "name": "Notifications",
-          "slug": "pages-account-settings-notifications"
-        },
-        {
-          "url": "pages/account-settings-connections",
-          "name": "Connections",
-          "slug": "pages-account-settings-connections"
-        }
-      ]
-    },
-    {
-      "name": "Authentications",
-      "icon": "menu-icon tf-icons mdi mdi-lock-open-outline",
-      "slug": "auth",
-      "submenu": [
-        {
-          "url": "auth/login-basic",
-          "name": "Login",
-          "slug": "auth-login-basic",
-          "target": "_blank"
-        },
-        {
-          "url": "auth/register-basic",
-          "name": "Register",
-          "slug": "auth-register-basic",
-          "target": "_blank"
-        },
-        {
-          "url": "auth/forgot-password-basic",
-          "name": "Forgot Password",
-          "slug": "auth-forgot-password-basic",
-          "target": "_blank"
         }
       ]
     },
