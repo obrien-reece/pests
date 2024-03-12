@@ -28,7 +28,6 @@
 36,Cabbage maggots,Cabbage,Moderate,22,70,Apply floating row covers to cabbage plants to prevent cabbage maggot egg-laying.,Apply beneficial nematodes to soil to control cabbage maggot populations.
 37,Corn earworms,Corn,Severe,26,70,Apply biological control agents such as parasitic wasps to corn silks to target corn earworm larvae.,Spray corn plants with insecticides containing spinosad or Bt to control corn earworm infestations.
 38,Cucumber beetles,Cucumbers,Severe,28,75,Plant cucumbers later in the growing season to avoid peak cucumber beetle activity.,Apply kaolin clay or diatomaceous earth to cucumber plants as a physical barrier against cucumber beetles.
-39,Cutworms,Potatoes,Moderate,20,65,Use collars around plant stems to prevent cutworm access to young potato plants.,Handpick cutworms from garden beds in the evening when they are most active.
 40,Earwigs,Strawberries,Mild,24,70,Place rolled-up newspaper traps near strawberry plants to capture earwigs.,Apply diatomaceous earth or insecticidal soap to strawberry plants to control earwig populations.
 41,Fall armyworms,Rice,Severe,28,75,Monitor for fall armyworm egg masses on rice leaves and destroy them.,Apply insecticides containing spinosad or Bt to control fall armyworm larvae on rice plants.
 42,Flea beetles,Tomatoes,Mild,26,68,Use floating row covers to protect tomato seedlings from flea beetle damage.,Apply neem oil or insecticidal soap to tomato plants to control flea beetle populations.
@@ -53,10 +52,8 @@
 62,Wireworms,Beets,Moderate,22,60,Implement crop rotation and clean cultivation practices to disrupt wireworm lifecycle.,Apply chemical insecticides as a last resort.
 63,Armyworms,Rice,Severe,30,75,Monitor rice fields for armyworm egg masses and destroy them.,Apply insecticides containing spinosad or Bt to control armyworm larvae on rice plants.
 64,Caterpillars,Corn,Mild,22,65,Install pheromone traps to monitor caterpillar populations in corn fields.,Apply biological insecticides containing Bacillus thuringiensis (Bt) to control caterpillar infestations.
-65,Cutworms,Wheat,Moderate,20,65,Use collars around plant stems to prevent cutworm access to young wheat plants.,Handpick cutworms from garden beds in the evening when they are most active.
 66,Earwigs,Tomatoes,Mild,24,70,Place rolled-up newspaper traps near tomato plants to capture earwigs.,Apply diatomaceous earth or insecticidal soap to tomato plants to control earwig populations.
 67,Flea beetles,Potatoes,Mild,22,68,Use floating row covers to protect potato seedlings from flea beetle damage.,Apply neem oil or insecticidal soap to potato plants to control flea beetle populations.
-68,Greenhouse whiteflies,Greenhouse crops,Moderate,26,70,Introduce natural enemies such as parasitic wasps or predatory mites to control greenhouse whiteflies.,Apply insecticidal soap or neem oil to greenhouse crops to control greenhouse whiteflies.
 69,Hornworms,Potatoes,Mild,24,70,Handpick hornworms from potato plants and dispose of them.,Introduce natural enemies such as parasitic wasps to control hornworm populations.
 70,Japanese beetles,Blueberries,Severe,28,70,Handpick Japanese beetles from blueberry plants and place them in a container of soapy water.,Apply neem oil or insecticidal soap to blueberry plants to control Japanese beetles.
 71,Leafhoppers,Potatoes,Moderate,24,70,Remove weeds and grasses from around potato plants to eliminate leafhopper habitat.,Apply insecticidal soap or neem oil to potato plants to control leafhoppers.
